@@ -46,3 +46,5 @@ docker run \
 -v /tmp/.test-ssh:/root/.ssh \
 --rm ansible-base:local ansible-playbook ping-playbook.yaml
 ```
+
+*Make sure your `/tmp/.test-ssh` directory contains the proper key file*
