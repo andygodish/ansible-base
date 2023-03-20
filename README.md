@@ -48,3 +48,25 @@ docker run \
 ```
 
 *Make sure your `/tmp/.test-ssh` directory contains the proper key file*
+
+## Ansible Galaxy
+
+Since Ansible is installed and properly configured within the container, you can utilize ansible-galaxy calls as seen below:
+
+```
+docker run \
+-v ${PWD}:/work \
+-v ${PWD}/roles:/root/.ansible/roles \
+-v /tmp/.test-ssh:/root/.ssh \
+--rm ansible-base:local ansible-galaxy install gantsign.oh-my-zsh
+```
+
+The ansible.cfg uses the `./roles` directory as its roles_path configuration, you should see the directory for the role created in that folder. 
+
+```
+docker run \
+-v ${PWD}:/work \
+-v ${PWD}/roles:/root/.ansible/roles \
+-v /tmp/.test-ssh:/root/.ssh \
+--rm ansible-base:local ansible-galaxy remove gantsign.oh-my-zsh
+```
