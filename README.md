@@ -50,7 +50,7 @@ docker run \
 *Make sure your `/tmp/.test-ssh` directory contains the proper key file*
 
 ```
-cp ~/.ssh/id_rsa /tmp/.test-ssh
+mkdir /tmp/.test-ssh && cp ~/.ssh/id_rsa /tmp/.test-ssh
 ```
 
 ## Ansible Galaxy
