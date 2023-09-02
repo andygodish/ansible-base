@@ -49,6 +49,10 @@ docker run \
 
 *Make sure your `/tmp/.test-ssh` directory contains the proper key file*
 
+```
+cp ~/.ssh/id_rsa /tmp/.test-ssh
+```
+
 ## Ansible Galaxy
 
 Since Ansible is installed and properly configured within the container, you can utilize ansible-galaxy calls as seen below:
